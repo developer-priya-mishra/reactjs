@@ -1,23 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM  from "react-dom/client";
+import person from "./assets/image/person.png";
 
 const jsxHeading = <h1 className="heading">Hello from JSX! </h1>
 
-const Heading1 = () => {
-    return <h1 className="heading">Hello from React Functional Component Heading1 </h1>
-}
-
-const Heading2 = () => <h1 className="heading">Hello from React Functional Component Heading2</h1>
-
-const Heading3 = () => (<h1 className="heading">Hello from React Functional Component Heading3</h1>)
-
 const Headings = () =>{
+    const [name,setName]=useState("");
+
     return (
         <>
-        <Heading1/>
-        <Heading2/>
-        <Heading3/>
-        <h1 className="heading">Hello from React Functional Component Headings</h1>
+        <span>🔍</span>
+        <input type="text" placeholder="Type to Search" value={name} onChange={(e)=>setName(e.target.value)}/>
+        <button onClick={() => alert(`Name is: ${name}`)}>Search</button>
     </>
    )
 }
