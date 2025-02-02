@@ -10,7 +10,7 @@ const Headings = () =>{
     return (
         <>
         <span>🔍</span>
-        <input type="text" placeholder="Type to Search" value={name} onChange={(e)=>setName(e.target.value)}/>
+        <input type="text" placeholder="Enter your name" value={name} onChange={(e)=>setName(e.target.value)}/>
         <button onClick={() => alert(`Name is: ${name}`)}>Search</button>
     </>
    )
